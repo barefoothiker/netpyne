@@ -174,6 +174,7 @@ def getCellsInclude(include, , includeCellGids = []):
     from .. import sim
 
     allCells = sim.net.allCells
+    print (" cell gids are " + str([c ['gid'] in allCells]) )
     if len(includeCellGids) > 0:
             allCells = [c for c in allCells if c ['gid'] in includeCellGids]
     allNetStimLabels = list(sim.net.params.stimSourceParams.keys())
